@@ -1,3 +1,4 @@
+#This is a code of python3 and kivy framework for the calculator
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
