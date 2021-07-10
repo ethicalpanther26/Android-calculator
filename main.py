@@ -3,7 +3,7 @@ from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
-
+#Main function of calculator
 class MainApp(App):
     def build(self):
         self.operators = ["/", "*", "+", "-"]
@@ -38,7 +38,7 @@ class MainApp(App):
         main_layout.add_widget(equals_button)
 
         return main_layout
-
+#button pressing system
     def on_button_press(self, instance):
         current = self.solution.text
         button_text = instance.text
@@ -59,13 +59,13 @@ class MainApp(App):
                 self.solution.text = new_text
         self.last_button = button_text
         self.last_was_operator = self.last_button in self.operators
-
+#calculator solution system
     def on_solution(self, instance):
         text = self.solution.text
         if text:
             solution = str(eval(self.solution.text))
             self.solution.text = solution
-
+#running calculator and ending functions.
 
 if __name__ == "__main__":
     app = MainApp()
